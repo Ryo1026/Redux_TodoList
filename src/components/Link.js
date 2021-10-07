@@ -3,15 +3,14 @@ const Link = ({ active, children, onClick }) => {
     return <span>{children}</span>;
   }
   return (
-    <a
-      href="#"
+    <button
       onClick={(e) => {
         e.preventDefault();
         onClick();
       }}
     >
       {children}
-    </a>
+    </button>
   );
 };
 

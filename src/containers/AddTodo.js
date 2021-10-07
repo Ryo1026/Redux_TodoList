@@ -5,7 +5,7 @@ let AddTodo = ({ dispatch }) => {
   let input;
   return (
     <div>
-      <from
+      <form
         onSubmit={(e) => {
           e.preventDefault();
           if (!input.value.trim()) {
@@ -21,11 +21,12 @@ let AddTodo = ({ dispatch }) => {
           }}
         />
         <button type="submit">新增Todo</button>
-      </from>
+      </form>
     </div>
   );
 };
 
+// 綁定 redux的data 與 react component
 AddTodo = connect()(AddTodo);
 
 export default AddTodo;
